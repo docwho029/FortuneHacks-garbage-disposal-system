@@ -1,3 +1,4 @@
-# Alohomora on NITSHACKS 5.0
+# Alohomora on FortuneHacks
+
 
 this is lock & key project
