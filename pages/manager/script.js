@@ -14,8 +14,12 @@ function assign(username, id) {
         } else {
             document.getElementById("button-assign-" + id).disabled = true;
             document.getElementById("button-assign-" + id).style.cursor = "not-allowed";
+            document.getElementById("button-assign-" + id).style.backgroundColor = "rgb(127, 127, 127)";
             document.getElementById("button-assign-" + id).onclick = "";
             document.getElementById("input-assign-" + id).value = "";
+            document.getElementById("input-assign-" + id).disabled = true;
+            document.getElementById("input-assign-" + id).style.cursor = "not-allowed";
+            document.getElementById("input-assign-" + id).style.backgroundColor = "rgb(127, 127, 127)";
         }
     });
 }
@@ -46,13 +50,13 @@ function getCollections() {
         for (let i = 0; i < data.length; i++) {
             id = data[i].id;
             row = document.createElement("tr");
-            attr = "";
-            btn = "<button class=\"button-view\" style=\"border: 0;\"" + attr + " onclick=\"submit(" + id + ");\" id=\"button-assign-" + id + "\">Send</button>";
+            btn = "<button class=\"button-view\" style=\"border: 0;\" onclick=\"submit(" + id + ");\" id=\"button-assign-" + id + "\">Send</button>";
+            inp = "<input type=\"text\" id=\"input-assign-" + id + "\">";
             if (data[i].assigned) {
-                attr = " disabled";
-                btn = "<button class=\"button-view\" style=\"border: 0; cursor: not-allowed;\"" + attr + " id=\"button-assign-" + id + "\">Send</button>";
+                btn = "<button class=\"button-view\" style=\"border: 0; cursor: not-allowed; background-color: rgb(127, 127, 127);\" id=\"button-assign-" + id + "\">Send</button>";
+                inp = "<input type=\"text\" id=\"input-assign-" + id + "\" disabled style=\"cursor: not-allowed; background-color: rgb(127, 127, 127);\">";
             }
-            row.innerHTML = "<td> " + data[i].title + "</td><td> " + data[i].location + "</td><td> " + data[i].type + "</td><td> </td><td> " + data[i].date + "</td><td> " + data[i].weight + " kg</td><td> " + data[i].applicant + "</td><td><div  style=\"display: flex; flex-flow: row nowrap;\"><input type=\"text\" name=\"\" id=\"input-assign-" + id + "\">" + btn + "</div></td>";
+            row.innerHTML = "<td> " + data[i].title + "</td><td> " + data[i].location + "</td><td> " + data[i].type + "</td><td> </td><td> " + data[i].date + "</td><td> " + data[i].weight + " kg</td><td> " + data[i].applicant + "</td><td><div  style=\"display: flex; flex-flow: row nowrap;\">" + inp + btn + "</div></td>";
             document.getElementById("collections-table").appendChild(row);
         }
     });

@@ -14,7 +14,7 @@ function getAssignedEntries (username) {
             id = myEntries[i].id;
             btn = "<button class=\"button-view\" style=\"border: 0;\" id=\"button-mark-" + id + "\" onclick=\"markAsComplete(" + id + ");\">Mark as Done</button>";
             if (myEntries[i].completed) {
-                btn = "<button class=\"button-view\" style=\"border: 0; cursor: not-allowed;\" id=\"button-mark-" + id + "\">Mark as Done</button>";
+                btn = "<button class=\"button-view\" style=\"border: 0; cursor: not-allowed; background-color: rgb(127, 127, 127);\" id=\"button-mark-" + id + "\">Mark as Done</button>";
             }
             row.innerHTML = "<td> " + myEntries[i].title + "</td><td> " + myEntries[i].location + "</td><td> " + myEntries[i].type + "</td><td> </td><td> " + myEntries[i].date + "</td><td> " + myEntries[i].weight + " kg</td><td> " + myEntries[i].applicant + "</td><td> " + btn + "</td>";
             document.getElementById("data-list").appendChild(row);
@@ -31,15 +31,18 @@ function markAsComplete(id) {
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         }
-    }).then((response) => response.json()).then((response) => {
-        if (response.startswith('Error')) {
+    }).then((response) => response.text()).then((response) => {
+        if (response.startsWith('Error')) {
             alert("There was an error with your account, please relogin");
             fetch("http://localhost:8080/logout", {
                 method: 'POST'
             });
             window.location.href = "http://localhost:8080/";
         } else {
+            document.getElementById("button-mark-" + id).disabled = true;
             document.getElementById("button-mark-" + id).style.cursor = "not-allowed";
+            document.getElementById("button-mark-" + id).onclick = "";
+            document.getElementById("button-mark-" + id).style.backgroundColor = "rgb(127, 127, 127)";
         }
     });
 }

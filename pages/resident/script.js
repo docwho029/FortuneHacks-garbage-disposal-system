@@ -44,6 +44,10 @@ function newEntry(title, loc, nature, weight, date) {
         if (response.startsWith('Error')) {
             alert("There was an error with your account. Please relogin.");
         } else {
+            document.getElementById("title").value = "";
+            document.getElementById("location").value = "";
+            document.getElementById("nature").value = "";
+            document.getElementById("weight").value = "";
             document.getElementById('nav-myCollections').click();
         }
     });
@@ -70,7 +74,7 @@ function getCommunity() {
         total = 0;
         total_weight = 0;
 
-        for(let i = 0; i < myEntries.length; i++) {
+        for (let i = 0; i < myEntries.length; i++) {
             if (myEntries[i].completed) {
                 total += 1;
                 total_weight += myEntries[i].weight;

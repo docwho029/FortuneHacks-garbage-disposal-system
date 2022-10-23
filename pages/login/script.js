@@ -10,7 +10,7 @@ function login (username, password) {
         }
     }).then((response) => response.text()).then((response) => {
         if (response.startsWith('Error')) {
-            alert('The username or password you entered are ivalid. Please try again.');
+            alert('The username or password you entered are invalid. Please try again.');
         } else {
             window.location.href = `http://localhost:8080/`;
         }

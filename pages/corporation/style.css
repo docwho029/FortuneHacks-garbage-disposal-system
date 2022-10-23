@@ -36,7 +36,8 @@ div#navigation {
 }
 
 div#panel__space {
-    background: #ECF0F1;
+    /*background: #ECF0F1;*/
+    background: #dbe4e7;
     width: 84.5%;
     height: 95%;
     border-radius: 20px;
