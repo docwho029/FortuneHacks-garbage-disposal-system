@@ -16,32 +16,47 @@
 </head>
 
 <body>
-    <div class="nav-bar">
-        <img src="http://localhost:8080/resource/assets/logobutdark.png" alt="">
+
+    <div class="card-one card">
+        <div class="title-login">Sign Up.</div>
+        
+        <form action="POST">
+            <input class="cec username" id="username" type="text" name="username" placeholder="username">
+            <input class="cec password" id="password" type="password" name="password" placeholder="password">
+            <div class="cec acc-type">
+                <select id="accs" name="account types">
+                    <option value="resident">Resident</option>
+                    <option value="corporation">Corporation</option>
+                    <option value="manager">Management</option>
+                </select>
+            </div>
+            <div class="button-next submit-button" onclick="submit();">let's go</div>
+        </form>
+
+        <a href='http://localhost:8080/user/login' class="signup-instead button-next" style="margin-top:0.4em;text-decoration:none;width:50%;background: transparent;border:3px solid #470063;color:#470063">Login Instead</a>
+        
     </div>
-    <div class="login-box">
-        <div class="heading">
-            Sign Up!
-        </div>
-        <div class="form">
-            <form action="POST">
-                <input class="username" id="username" type="text" name="username" placeholder="username">
-                <input class="password" id="password" type="password" name="password" placeholder="password">
-                <div class="acc-type">
-                    <select id="accs" name="account types">
-                        <option value="resident">Resident</option>
-                        <option value="corporation">Corporation</option>
-                        <option value="manager">Management</option>
-                    </select>
-                </div>
-                <div class="submit-button" onclick="submit();">let's go</div>
-                <a href='http://localhost:8080/user/login' class="signup-instead">Login Instead</a>
-            </form>
+
+    <div class="card-caption card">
+        <div>
+            Keeping things simple,<br>
+            so you can <span id='focus' style="color:#470063;
+            ">focus</span> on what matters
         </div>
     </div>
-    <div class="footer"
-        style="position: absolute; bottom: 2rem; margin-inline: auto; left: 50%; transform: translateX(-50%);">made with
-        ❤️ for FortuneHacks by alohomora</div>
+
+    <div class="card-transparent">
+        One employee portal. <br>
+        One login code.
+    </div>
+
+    <div class="card-logo card"><img src="http://localhost:8080/resource/assets/logobutdark.png" alt=""></div>
+
+    <!-- old -->
+
+    
+    
+    
 </body>
 
 </html>
