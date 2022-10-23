@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="icon" href="http://localhost:8080/resource/assets/icon.png">
+    <link rel="stylesheet" href="http://localhost:8080/resource/signup/style.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="http://localhost:8080/resource/signup/script.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <img src="http://localhost:8080/resource/assets/logobutdark.png" alt="">
+    </div>
+    <div class="login-box">
+        <div class="heading">
+            Sign Up!
+        </div>
+        <div class="form">
+            <form action="POST">
+                <input class="username" id="username" type="text" name="username" placeholder="username">
+                <input class="password" id="password" type="password" name="password" placeholder="password">
+                <div class="acc-type">
+                    <select id="accs" name="account types">
+                        <option value="resident">Resident</option>
+                        <option value="corporation">Corporation</option>
+                        <option value="manager">Management</option>
+                    </select>
+                </div>
+                <div class="submit-button" onclick="submit();">let's go</div>
+                <a href='http://localhost:8080/user/login' class="signup-instead">Login Instead</a>
+            </form>
+        </div>
+    </div>
+    <div class="footer"
+        style="position: absolute; bottom: 2rem; margin-inline: auto; left: 50%; transform: translateX(-50%);">made with
+        ❤️ for FortuneHacks by alohomora</div>
+</body>
+
+</html>

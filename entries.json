@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Banana Peels",
+        "id": 1,
+        "location": "Mirzapur",
+        "type": "Biodegradable",
+        "weight": 6,
+        "date": "22-10-2022",
+        "applicant": "Saptarshi",
+        "assigned": true,
+        "corporation": "Shuvam",
+        "completed": true
+    },
+    {
+        "title": "Sugarcane",
+        "id": 2,
+        "location": "Kolkata",
+        "type": "Biodegradable",
+        "weight": 8,
+        "date": "22-10-2022",
+        "applicant": "Saptarshi",
+        "assigned": true,
+        "corporation": "Shuvam",
+        "completed": true
+    },
+    {
+        "title": "Coconut Husks",
+        "id": 3,
+        "location": "Mirzapur",
+        "type": "Biodegradable",
+        "weight": "12",
+        "date": "23-9-2022",
+        "applicant": "Saptarshi",
+        "assigned": true,
+        "corporation": "Shuvam",
+        "completed": true
+    },
+    {
+        "title": "bruh",
+        "id": 4,
+        "location": "1",
+        "type": "11",
+        "weight": "1",
+        "date": "23-9-2022",
+        "applicant": "Saptarshi",
+        "assigned": true,
+        "corporation": "Shuvam",
+        "completed": true
+    },
+    {
+        "title": "Banana",
+        "id": 5,
+        "location": "Kolkata",
+        "type": "Biodegradable",
+        "weight": "12",
+        "date": "23-9-2022",
+        "applicant": "Saptarshi",
+        "assigned": true,
+        "corporation": "Shuvam",
+        "completed": true
+    }
+]
